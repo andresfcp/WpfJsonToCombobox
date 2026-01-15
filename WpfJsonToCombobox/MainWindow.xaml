@@ -7,11 +7,32 @@
         mc:Ignorable="d"
         Title="Example of JSON to ComboBox" Height="450" Width="800">
     <StackPanel>
-        <ComboBox x:Name="LanguageComboBox" Width="200" Height="30" Margin="10" SelectionChanged="LanguageComboBox_SelectionChanged"/>
-        <Label Content="Name:" Width="200" Height="30" Margin="10"/>
-        <TextBlock x:Name="NameTextBlock" Width="200" Height="30" Margin="10"/>
-        <Label Content="Value:" Width="200" Height="30" Margin="10"/>
-        <TextBlock x:Name="ValueTextBlock" Width="200" Height="30" Margin="10"/>
-        <Button x:Name="ShowSelectionButton" Content="Show Selection" Width="100" Height="30" Margin="10" Click="ShowSelectionButton_Click"/>
+        <Label Content="Select Language:" 
+               FontWeight="Bold"
+               Width="200" Height="30" 
+               Margin="5"/>
+        <ComboBox x:Name="LanguageComboBox" 
+                  Width="200" Height="30" 
+                  Margin="5" 
+                  SelectionChanged="LanguageComboBox_SelectionChanged"/>
+        <Label Content="Name:" 
+               FontWeight="Bold"
+               Width="200" Height="30" 
+               Margin="5"/>
+        <TextBlock x:Name="NameTextBlock" 
+                   Width="200" Height="30" 
+                   Margin="5"/>
+        <Label Content="Value:" 
+               FontWeight="Bold"
+               Width="200" Height="30" 
+               Margin="5"/>
+        <TextBlock x:Name="ValueTextBlock" 
+                   Width="200" Height="30" 
+                   Margin="5"/>
+        <Button x:Name="ShowSelectionButton" 
+                Content="Show Selection" 
+                Width="100" Height="30" 
+                Margin="5" 
+                Click="ShowSelectionButton_Click"/>
     </StackPanel>
 </Window>
