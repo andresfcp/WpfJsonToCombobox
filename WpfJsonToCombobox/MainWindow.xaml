@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfJsonToCombobox"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="Example of JSON to ComboBox" Height="450" Width="800">
+    <StackPanel>
+        <ComboBox x:Name="LanguageComboBox" Width="200" Height="30" Margin="10"/>
+    </StackPanel>
 </Window>

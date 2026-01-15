@@ -1,13 +1,6 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using System.IO;
+using WpfJsonToCombobox.Models;
 
 namespace WpfJsonToCombobox
 {
@@ -19,6 +12,21 @@ namespace WpfJsonToCombobox
         public MainWindow()
         {
             InitializeComponent();
+            LoadJson();
+        }
+
+        private void LoadJson()
+        {
+            string jsonPath = @"Assets\languages.json";
+            string jsonContent = File.ReadAllText(jsonPath);
+            List<Language>? languages = System.Text.Json.JsonSerializer.Deserialize<List<Language>>(jsonContent);
+            if (languages != null)
+            {
+                LanguageComboBox.ItemsSource = languages;
+                LanguageComboBox.DisplayMemberPath = "Name";
+                LanguageComboBox.SelectedValuePath = "Value";
+                LanguageComboBox.SelectedIndex = 0;
+            }
         }
     }
 }
